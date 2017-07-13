@@ -1,0 +1,23 @@
+nav a {
+    display:block;
+}
+main {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container {
+    margin-left: 2em;
+}
+
+input {
+    display: block;
+}
+
+textarea {
+    display: block;
+}
+
+.flash_message {
+    color: red;
+}

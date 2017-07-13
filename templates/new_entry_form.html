@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>What's on your mind?</h1>
+<form action="/new_entry" method="post">
+
+        <label for="title">How would you summarize your idea?</label>
+        <input name="title" type="text" value="{{ new_entry_title }}">
+
+        <label for="body">Tell me more:</label>
+        <textarea rows="4" cols="50" name="body" >{{ new_entry_body }}</textarea>
+
+    <input type="submit" value="Save">
+</form>
+{% endblock %}
