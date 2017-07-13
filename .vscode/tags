@@ -4,24 +4,23 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-Entry	../main.py	/^class Entry(db.Model):$/;"	kind:class	line:12
-Flask	../main.py	/^from flask import Flask, request, redirect, render_template, session, flash$/;"	kind:namespace	line:1
-SQLAlchemy	../main.py	/^from flask_sqlalchemy import SQLAlchemy$/;"	kind:namespace	line:2
-__init__	../main.py	/^    def __init__(self, title, body, ):$/;"	kind:member	line:21
-app	../main.py	/^app = Flask(__name__)$/;"	kind:variable	line:5
-body	../main.py	/^    body = db.Column(db.String(1000))$/;"	kind:variable	line:18
-created	../main.py	/^    created = db.Column(db.DateTime)$/;"	kind:variable	line:19
-datetime	../main.py	/^from datetime import datetime$/;"	kind:namespace	line:3
-db	../main.py	/^db = SQLAlchemy(app)$/;"	kind:variable	line:9
-display_blog_entries	../main.py	/^def display_blog_entries():$/;"	kind:function	line:44
-flash	../main.py	/^from flask import Flask, request, redirect, render_template, session, flash$/;"	kind:namespace	line:1
-id	../main.py	/^    id = db.Column(db.Integer, primary_key=True)$/;"	kind:variable	line:16
-index	../main.py	/^def index():$/;"	kind:function	line:37
-is_valid	../main.py	/^    def is_valid(self):$/;"	kind:member	line:26
+Entry	../main.py	/^class Entry(db.Model):$/;"	kind:class	line:16
+Flask	../main.py	/^from flask import Flask, request, redirect, render_template, flash$/;"	kind:namespace	line:5
+SQLAlchemy	../main.py	/^from flask_sqlalchemy import SQLAlchemy$/;"	kind:namespace	line:6
+__init__	../main.py	/^    def __init__(self, title, body ):$/;"	kind:member	line:25
+app	../main.py	/^app = Flask(__name__)$/;"	kind:variable	line:9
+body	../main.py	/^    body = db.Column(db.String(1000))$/;"	kind:variable	line:22
+created	../main.py	/^    created = db.Column(db.DateTime)$/;"	kind:variable	line:23
+datetime	../main.py	/^from datetime import datetime$/;"	kind:namespace	line:7
+db	../main.py	/^db = SQLAlchemy(app)$/;"	kind:variable	line:13
+display_blog_entries	../main.py	/^def display_blog_entries():$/;"	kind:function	line:48
+flash	../main.py	/^from flask import Flask, request, redirect, render_template, flash$/;"	kind:namespace	line:5
+id	../main.py	/^    id = db.Column(db.Integer, primary_key=True)$/;"	kind:variable	line:20
+index	../main.py	/^def index():$/;"	kind:function	line:41
+is_valid	../main.py	/^    def is_valid(self):$/;"	kind:member	line:30
 main.py	../main.py	1;"	kind:file	line:1
-new_entry	../main.py	/^def new_entry():$/;"	kind:function	line:67
-redirect	../main.py	/^from flask import Flask, request, redirect, render_template, session, flash$/;"	kind:namespace	line:1
-render_template	../main.py	/^from flask import Flask, request, redirect, render_template, session, flash$/;"	kind:namespace	line:1
-request	../main.py	/^from flask import Flask, request, redirect, render_template, session, flash$/;"	kind:namespace	line:1
-session	../main.py	/^from flask import Flask, request, redirect, render_template, session, flash$/;"	kind:namespace	line:1
-title	../main.py	/^    title = db.Column(db.String(180))$/;"	kind:variable	line:17
+new_entry	../main.py	/^def new_entry():$/;"	kind:function	line:71
+redirect	../main.py	/^from flask import Flask, request, redirect, render_template, flash$/;"	kind:namespace	line:5
+render_template	../main.py	/^from flask import Flask, request, redirect, render_template, flash$/;"	kind:namespace	line:5
+request	../main.py	/^from flask import Flask, request, redirect, render_template, flash$/;"	kind:namespace	line:5
+title	../main.py	/^    title = db.Column(db.String(180))$/;"	kind:variable	line:21

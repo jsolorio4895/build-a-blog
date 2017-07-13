@@ -1,4 +1,8 @@
-from flask import Flask, request, redirect, render_template, session, flash
+'''
+See repo README
+'''
+
+from flask import Flask, request, redirect, render_template, flash
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -8,6 +12,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://build-a-blog:build-a-bl
 app.config['SQLALCHEMY_ECHO'] = True
 db = SQLAlchemy(app)
 app.secret_key = 'f8wv3w2f>v9j4sEuhcNYydAGMzzZJgkGgyHE9gUqaJcCk^f*^o7fQyBT%XtTvcYM'
+
 
 class Entry(db.Model):
     '''
@@ -77,18 +82,19 @@ def new_entry():
         if new_entry.is_valid():
             db.session.add(new_entry)
             db.session.commit()
+
             # display just this most recent blog entry
-            url = "/blog?" + str(new_entry.id)
-            return redirect(url) 
-        else: 
-            flash("Please check your entry for errors. Both a title and a body are required.") 
+            url = "/blog?id=" + str(new_entry.id)
+            return redirect(url)
+        else:
+            flash("Please check your entry for errors. Both a title and a body are required.")
             return render_template('new_entry_form.html',
                 title="Create new blog entry",
                 new_entry_title=new_entry_title,
                 new_entry_body=new_entry_body)
 
-    else:
-        return render_template('new_entry_form.html')
+    else: # GET request
+        return render_template('new_entry_form.html', title="Create new blog entry")
 #
 if __name__ == '__main__':
     app.run()
