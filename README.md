@@ -23,44 +23,47 @@ The app must meet several requirements:
 * No authentication or authorization is required
 * All access can be anonymous
 
-## User stories
+## User Scenarios
 
-### Story 0
-* **As** an anonymous visitor to the site
+### Scenario 0 : Default display
+* **Given** I am an anonymous visitor to the site
 * **When** I arrive at the site (route "/")
 * **Then** I see a list of previous blog entries in oldest-first order
 
-### Story 1
-* **As** an anonymous visitor ON the site
+### Scenario 1 : Menu available all the time
+* **Given** I am an anonymous visitor 
 * **When** on any page
 * **Then** I can see a menu of actions available to me
 
-### Story 2
-* **As** an anonymous visitor ON the site
+### Scenario 2 : Reverse chronological order display
+* **Given** I am an anonymous visitor
 * **When** on any page
 * **And** I click on the "List all entries (newest-first)" menu item
 * **Then** I see a list of previous blog entries in newest-first order
 
-### Story 3
-* **As** an anonymous visitor ON the site
+### Scenario 3 : Chronological order display
+* **Given** I am an anonymous visitor
 * **When** on any page
 * **And** I click on the "List all entries (oldest-first)" menu item
 * **Then** I see a list of previous blog entries in oldest-first order
 
-### Story 4
-* **As** an anonymous visitor ON the site
+### Scenario 4 : Create new entry form display
+* **Given** I am an anonymous visitor
 * **When** I click on the "Create new entry" menu items
-* **Then** I see a form for entering a title and a body
+* **Then** I go to the "Create new entry" form page
+* **And** I see a form for entering a title and a body
 
-### Story 5
-* **As** an anonymous visitor on the "Create new entry" form page
+### Scenario 5 : Successfully create new entry
+* **Given** I am an anonymous visitor 
+* **And** I am on the "Create new entry" form page
 * **When** I supply a _title_
 * **And** I supply a _body_
 * **And** I click the "Save" button
 * **Then** I see my new entry on a page by itself
 
-### Story 6
-* **As** an anonymous visitor on the "Create new entry" form page
+### Scenario 6 : Create new entry with errors
+* **Given** I am an anonymous visitor 
+* **And** I am on the "Create new entry" form page
 * **When** I DO NOT supply a title
 * **Or** I DO NOT supply a body
 * **And** I click the "Save" button
