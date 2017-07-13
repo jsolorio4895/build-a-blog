@@ -18,7 +18,7 @@ class Entry(db.Model):
     body = db.Column(db.String(1000))
     created = db.Column(db.DateTime)
 
-    def __init__(self, title, body, ):
+    def __init__(self, title, body ):
         self.title = title
         self.body = body
         self.created = datetime.utcnow()

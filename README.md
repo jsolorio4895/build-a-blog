@@ -3,16 +3,25 @@ LC101 assignment
 
 This small, flask-based app implements a blog.
 
+# Entity Analysis
+
 * A blog is a series of _entries_
 * Each _entry_ includes a _title_ and a _body_
 
+# Requirements
 
 The app must meet several requirements:
 
 * List all previous blog entries in chronological order
 * List all previous blog entries in reverse-chronological order
 * Allow anybody to create a new blog entry
-* Display the blog entry after creation
+* Display the individual blog entry after creation
+* Include a menu bar with available commands
+
+## Non-requirements
+
+* No authentication or authorization is required
+* All access can be anonymous
 
 # User stories
 
@@ -45,17 +54,17 @@ The app must meet several requirements:
 
 ## Story 5
 * As an anonymous visitor on the "Create new entry" form page
-* When I supply a title
-* And I supply a body
-* And I click the "Add new entry" button
+* When I supply a _title_
+* And I supply a _body_
+* And I click the "Save" button
 * Then I see my new entry on a page by itself
 
 ## Story 6
 * As an anonymous visitor on the "Create new entry" form page
 * When I DO NOT supply a title
 * Or I DO NOT supply a body
-* And I click the "Add new entry" button
-* Then I see the same form for entering a title and a body with an error message
+* And I click the "Save" button
+* Then I see the same form with my given values (if any) for _title_ and _body_ with an error message
 
 
 # User accessible command (the menu items):
@@ -69,7 +78,7 @@ The app must meet several requirements:
 * "/blog" - GET: Display list of all entries with default sort order (oldest-first)
 * "/blog?sort=newest" - GET: Display list of all entries newest-first
 * "/blog?entry=ID" GET: Display entry with id=ID
-* "/newentry" - GET: Display new entry form; POST: Process new entry
+* "/new_entry" - GET: Display new entry form; POST: Process new entry
 
 
 
