@@ -7,6 +7,7 @@ app.config['DEBUG'] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://build-a-blog:launch@localhost:8889/build-a-blog'
 app.config['SQLALCHEMY_ECHO'] = True
 db = SQLAlchemy(app)
+app.secret_key = 'thisappissecret'
 
 class Entry(db.Model):
     '''
@@ -46,7 +47,7 @@ def display_blog_entries():
     Either list one entry with the given ID
     Or list all blog entries (in default or newest order)
     '''
-    # refactor to use routes with variables instead of GET parameters
+    #  uses routes with variables instead of GET parameters
     entry_id = request.args.get('id')
     if (entry_id):
         entry = Entry.query.get(entry_id)
